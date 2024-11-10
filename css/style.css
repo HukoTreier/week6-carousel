@@ -1,0 +1,58 @@
+* {  /* tühistab vaikeseaded */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container { 
+    width: 75%; /* konteineri laius ekraanil */
+    text-align: center;
+    margin: 3rem auto; /* toob konteineri natukene alla */
+}
+
+.carousel {
+    max-width: 500px;
+    margin: 0 auto; /* keskele */
+    position: relative; /* nuppude pildi peale panemiseks, täpsustab et nuppude asukohta arvutatatakse lähtudes karuselli asukohast */
+ }
+
+ .carousel img { 
+    width: 100%; /* piltide laius sama, mis karuselli ala */
+ }
+
+ .carousel .carousel__item, /* piltide peitmine */
+ .carousel .carousel__item--hidden {
+    display: none; /* peidab kõik pildid */
+ }
+
+ .carousel .carousel__item--visible {
+    display: block; /* näitab 1. pilti. Alumine reegel kirjutab esimese üle. Võiks olla all */
+    animation: fadeIn 0.6s; /* animatsioon */
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;} /* animatsioon- alguses läbipaistev */
+    100% {opacity: 1;}
+}
+
+ .carousel .carousel__actions { /* karuselli nupud asuvad divis nimega carousel */
+    display: flex;
+    justify-content: space-between; /* ajab nupud laiali */
+    width: 100%; /* nuppude ala sama lai, kui karuselli ala */
+    position: absolute; /* asukoht lähtuvalt karuselli asukohast */
+    top: 50%; /* ülevalt 50% */
+    transform: translateY(-50%); /* tõstab nuppu poole võrra */
+ }
+
+ .carousel .carousel__actions button { /* nuppude viimistlus */
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    border: 0; /* eemaldab raami nupult */
+    background-color:rgba(177, 198, 201, 0.445);
+    font-size: 2rem; /* nupu sisu suurus */
+    color: #fff;
+    margin: 0.5rem; /* lükkab äärtest eemale */
+ }

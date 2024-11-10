@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JS Carousel</title>
+</head>
+<body>
+    
+    <div class="container">
+       <div class="carousel"> <!--Karuselli konteiner, järgmine pilt tehakse nähtavaks alles klikkides-->
+            <div class="carousel__item carousel__item--visible"> <!--alguses ainult 1. element nähtav-->
+                <img src="images/1.jpg" alt="">
+            </div>
+
+            <div class="carousel__item">
+                <img src="images/2.jpg" alt="">
+            </div>
+
+            <div class="carousel__item">
+                <img src="images/3.jpg" alt="">
+            </div>
+
+            <div class="carousel__actions"> <!--nuppude lisamine-->
+                <button id="carousel__button--prev" aria-label="Previous slide"><</button> <!--Nupu id, aria-label et brauser teaks mida teeb. Nooleke vaatab vasakule-->
+                <button id="carousel__button--next" aria-label="Next slide">></button> <!--Nool vaatab paremale-->
+            </div>
+
+       </div> 
+
+    </div>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
